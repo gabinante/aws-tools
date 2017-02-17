@@ -3,7 +3,8 @@ This is a collection of tools which take aws cli commands and make them better.
 # Example Output of commands
 
 ## ec2check()
-```gabinante ~ $ ec2check prd web
+```
+gabinante ~ $ ec2check prd web
 InstanceID           | Availability Zone  | Launch Time               | State      | Private IP         | Public IP          | Instance Type     | Image             | SubnetID          | Architecture    |
 "i-0e727d1c2a7532458 | us-west-2b         | 2017-02-17T03:32:08.000Z  | running    | 10.128.101.249     | 54.224.127.17      | c4.2xlarge        | ami-5erd573e      | subnet-42dbd82b   | x86_64"         |
 "i-0017acb7124c23817 | us-west-2b         | 2017-02-17T03:32:08.000Z  | running    | 10.128.101.118     | 54.224.207.116     | c4.2xlarge        | ami-5erd573e      | subnet-42dbd82b   | x86_64"         |
@@ -12,7 +13,8 @@ InstanceID           | Availability Zone  | Launch Time               | State   
 ```
 
 ## route53create()
-```gabinante ~ $ route53create gabeslide.com
+```
+gabinante ~ $ route53create gabeslide.com
 Creating Hosted Zone...
 {
     "HostedZone": {
@@ -48,4 +50,5 @@ Adding alias records...
         "SubmittedAt": "2017-02-17T20:49:20.737Z",
         "Id": "/change/C251UZ8BSWO1WE"
     }
-}```
+}
+```
