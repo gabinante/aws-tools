@@ -1,0 +1,17 @@
+{
+  "Comment": "creating alias for naked domain",
+  "Changes": [
+    {
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "gabeslide.com",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "Z33MT2383RN6UU",
+          "DNSName": "web-prd-123456789.us-west-2.elb.amazonaws.com",
+          "EvaluateTargetHealth": false
+        }
+      }
+    }
+  ]
+}
