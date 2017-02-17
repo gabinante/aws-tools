@@ -12,7 +12,7 @@ ec2check() {
      [ "$env" == "prd" -o "$env" == "stg" ] && profile="prd"
      [ "$env" == "tst" -o "$env" == "int" ] && profile="dev"
 
-printf "%-20s | %-18s | %-25s | %-10s | %-18s | %-18s | %-17s | %-17s | %-17s | %-15s |\n" "InstanceID" "Availability Zone" "Launch Time" "State" "Private IP" "Public IP" "Instance Type" "Image" "SubnetID" "Architecture"
+printf "| %-20s | %-18s | %-25s | %-10s | %-18s | %-18s | %-17s | %-17s | %-17s | %-15s |\n" "InstanceID" "Availability Zone" "Launch Time" "State" "Private IP" "Public IP" "Instance Type" "Image" "SubnetID" "Architecture"
      for region in $regions
      do
          aws ec2 describe-instances \
@@ -21,9 +21,9 @@ printf "%-20s | %-18s | %-25s | %-10s | %-18s | %-18s | %-17s | %-17s | %-17s | 
              --filters Name=tag:service,Values=${service} Name=tag:environment,Values=${env} \
              --output text \
              --query $query
-     done | while read line
+     done | while read line;
      do
-             newline=$(echo "$line" | sed "s/[^ ][^ ]*/\"&\"/g")
-             printf "%-20s | %-18s | %-25s | %-10s | %-18s | %-18s | %-17s | %-17s | %-17s | %-15s |\n" $newline
+             set -- $line;
+             printf "| %-20s | %-18s | %-25s | %-10s | %-18s | %-18s | %-17s | %-17s | %-17s | %-15s |\n" $*;
      done
  }
