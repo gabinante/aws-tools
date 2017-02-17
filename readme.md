@@ -17,7 +17,7 @@ InstanceID           | Availability Zone  | Launch Time               | State   
 "i-081ec436237rd3b33 | us-west-2a         | 2017-02-17T03:32:08.000Z  | running    | 10.128.100.137     | 54.224.111.145     | c4.2xlarge        | ami-5erd573e      | subnet-7ecbd814   | x86_64"         |
 ```
 
-## route53create-gz-and-modify
+## route53create-hz-and-modify
 Creates a hosted zone and then creates/modifies records on that hosted zone.
 ```
 gabinante ~ $ route53create gabeslide.com
