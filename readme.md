@@ -1,4 +1,8 @@
-This is a collection of tools which take aws cli commands and make them better.
+This is a collection of tools (mostly bash functions) the goal of which is to make the default AWS CLI functions:
+Easier to use
+Easily repeatable
+Simpler
+Generate output that is easily parsed by humans and/or scripts
 
 # Example Output of commands
 
