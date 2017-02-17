@@ -6,7 +6,8 @@ Generate output that is easily parsed by humans and/or scripts
 
 # Example Output of commands
 
-## ec2check()
+## describe-instances-by-tag
+uses the describe-instances command to search for your instances by tag (service, environment) and generate human readable output.
 ```
 gabinante ~ $ ec2check prd web
 InstanceID           | Availability Zone  | Launch Time               | State      | Private IP         | Public IP          | Instance Type     | Image             | SubnetID          | Architecture    |
@@ -16,7 +17,8 @@ InstanceID           | Availability Zone  | Launch Time               | State   
 "i-081ec436237rd3b33 | us-west-2a         | 2017-02-17T03:32:08.000Z  | running    | 10.128.100.137     | 54.224.111.145     | c4.2xlarge        | ami-5erd573e      | subnet-7ecbd814   | x86_64"         |
 ```
 
-## route53create()
+## route53create-gz-and-modify
+Creates a hosted zone and then creates/modifies records on that hosted zone.
 ```
 gabinante ~ $ route53create gabeslide.com
 Creating Hosted Zone...
