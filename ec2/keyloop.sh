@@ -1,4 +1,5 @@
- keyloop() {
+#A bash function to loop through all of your keys and users, in a desperate attempt to ssh to that instance you've never logged into before.
+keyloop() {
       me=`whoami`
       sshdir="/Users/$me/.ssh"
       users="centos ec2-user root ubuntu"
