@@ -1,0 +1,1 @@
+for i in $(aws s3api list-buckets | grep Name | awk {'print $2'} | tr -d \" | tail -n +2); do echo checking $i for AllUsers access...; aws s3api get-bucket-acl --bucket $i | grep -A 3 "http://acs.amazonaws.com/groups/global/AllUsers" | grep Permission; echo ; done
